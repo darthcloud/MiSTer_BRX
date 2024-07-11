@@ -1,13 +1,13 @@
 #!/bin/sh
-# description: Reconfigure xpad for Hyperkin Duke
+# description: Reconfigure xpad for BRX dongle
 
 start() {
-	echo "2e24 0652" > /sys/bus/usb/drivers/xpad/new_id
+	echo "303A 81EB" > /sys/bus/usb/drivers/xpad/new_id
 	modprobe xpad
 }
 
 stop() {
-	echo "2e24 0652" > /sys/bus/usb/drivers/xpad/remove_id
+	echo "303A 81EB" > /sys/bus/usb/drivers/xpad/remove_id
 	modprobe xpad
 }
 
